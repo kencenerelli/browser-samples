@@ -17,11 +17,11 @@ limitations under the License.
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Picker API Quickstart</title>
+  <title>Google Picker API Quickstart</title>
   <meta charset="utf-8" />
 </head>
 <body>
-<p>Picker API API Quickstart</p>
+<p>Picker API Quickstart</p>
 
 <!--Add buttons to initiate auth sequence and sign out-->
 <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
@@ -39,11 +39,11 @@ limitations under the License.
   // included, separated by spaces.
   const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
 
-  // TODO(developer): Set to client ID and API key from the Developer Console
+  // TODO(developer): From the Google Cloud console, set to client ID and API key.
   const CLIENT_ID = '<YOUR_CLIENT_ID>';
   const API_KEY = '<YOUR_API_KEY>';
 
-  // TODO(developer): Replace with your own project number from console.developers.google.com.
+  // TODO(developer): From the Google Cloud console, replace with your own project number.
   const APP_ID = '<YOUR_APP_ID>';
 
   let tokenClient;
@@ -86,7 +86,7 @@ limitations under the License.
   }
 
   /**
-   * Enables user interaction after all libraries are loaded.
+   * Allows user interaction after all libraries are loaded.
    */
   function maybeEnableButtons() {
     if (pickerInited && gisInited) {
@@ -95,7 +95,7 @@ limitations under the License.
   }
 
   /**
-   *  Sign in the user upon button click.
+   * Signs in the user upon button click.
    */
   function handleAuthClick() {
     tokenClient.callback = async (response) => {
@@ -119,7 +119,7 @@ limitations under the License.
   }
 
   /**
-   *  Sign out the user upon button click.
+   * Signs out the user upon button click.
    */
   function handleSignoutClick() {
     if (accessToken) {
@@ -132,7 +132,7 @@ limitations under the License.
   }
 
   /**
-   *  Create and render a Picker object for searching images.
+   * Create and render a Picker object for searching images.
    */
   function createPicker() {
     const view = new google.picker.View(google.picker.ViewId.DOCS);
@@ -152,7 +152,7 @@ limitations under the License.
 
   /**
    * Displays the file details of the user's selection.
-   * @param {object} data - Containers the user selection from the picker
+   * @param {object} data - Containers the user selection from the Picker.
    */
   async function pickerCallback(data) {
     if (data.action === google.picker.Action.PICKED) {
