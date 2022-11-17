@@ -39,7 +39,7 @@ limitations under the License.
   // included, separated by spaces.
   const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
 
-  // TODO(developer): From the Google Cloud console, set to client ID and API key.
+  // TODO(developer): From the Google Cloud console, replace with your client ID and API key.
   const CLIENT_ID = '<YOUR_CLIENT_ID>';
   const API_KEY = '<YOUR_API_KEY>';
 
@@ -152,7 +152,7 @@ limitations under the License.
 
   /**
    * Displays the file details of the user's selection.
-   * @param {object} data - Containers the user selection from the Picker.
+   * @param {object} data - Contains the user selection from the Picker.
    */
   async function pickerCallback(data) {
     if (data.action === google.picker.Action.PICKED) {
